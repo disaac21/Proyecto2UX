@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, TouchableOpacity} from 'react-native';
-import icons from '../constants/icons';
+import icons from '../../constants/icons';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Icon = ({onPress, icon, style, size = 32}) => {

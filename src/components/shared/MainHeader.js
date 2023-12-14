@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { colors, sizes, spacing } from '../constants/theme';
+import { colors, sizes, spacing } from '../../constants/theme';
 import { Text } from 'galio-framework';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
