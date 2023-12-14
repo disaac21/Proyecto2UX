@@ -6,6 +6,7 @@ import Icon from '../components/shared/Icon';
 import { colors, sizes } from '../constants/theme';
 import { StyleSheet, Animated } from 'react-native';
 import HomeNavigator from './HomeNavigator';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const tabs = [
   {
@@ -16,10 +17,10 @@ const tabs = [
   //   name: 'Search',
   //   screen: SearchScreen,
   // },
-  // {
-  //   name: 'Favorite',
-  //   screen: FavoriteScreen,
-  // },
+  {
+    name: 'User',
+    screen: ProfileScreen,
+  },
 ];
 
 const Tab = createBottomTabNavigator();
