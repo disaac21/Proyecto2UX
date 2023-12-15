@@ -3,6 +3,10 @@ import { View } from 'react-native';
 import { colors, shadow } from '../../constants/theme';
 import Icon from './Icon';
 
+const AgregarFavorito = () => {
+    console.log('le di click en favorito');
+};
+
 const FavoriteButton = ({ active, style }) => {
     return (
         <View
@@ -15,7 +19,7 @@ const FavoriteButton = ({ active, style }) => {
                 shadow.light,
                 style,
             ]}>
-            <Icon icon={active ? 'FavoriteFilled' : 'Favorite'} size={24} />
+            <Icon onPress = {AgregarFavorito} icon={active ? 'FavoriteFilled' : 'Favorite'} size={24} />
         </View>
     );
 };

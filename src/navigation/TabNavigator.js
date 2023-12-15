@@ -7,16 +7,17 @@ import { colors, sizes } from '../constants/theme';
 import { StyleSheet, Animated } from 'react-native';
 import HomeNavigator from './HomeNavigator';
 import ProfileScreen from '../screens/ProfileScreen';
+import FavoriteScreen from '../screens/FavoritesScreen';
 
 const tabs = [
   {
     name: 'Home',
     screen: HomeNavigator,
   },
-  // {
-  //   name: 'Search',
-  //   screen: SearchScreen,
-  // },
+  {
+    name: 'Favorite',
+    screen: FavoriteScreen,
+  },
   {
     name: 'User',
     screen: ProfileScreen,
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     width: 10,
     height: 2,
     left: sizes.width / tabs.length / 2 - 5,
-    bottom: 30,
+    bottom: 40,
     backgroundColor: colors.primary,
     zIndex: 100,
   },
