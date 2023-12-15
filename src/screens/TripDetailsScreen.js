@@ -7,6 +7,7 @@ import TripDetailsCard from '../components/TripDetailsCard/TripDetailsCard';
 import * as Animatable from 'react-native-animatable';
 //import TripDetailsCarousel from '../components/TripDetailsCarousel';
 import FavoriteButton from '../components/shared/FavoriteButton';
+import TripDetailsCarousel from '../components/TripDetailsCarousel';
 
 const TripDetailsScreen = ({ navigation, route }) => {
     const insets = useSafeAreaInsets();
@@ -34,7 +35,7 @@ const TripDetailsScreen = ({ navigation, route }) => {
                 easing="ease-in-out">
                 <FavoriteButton onPress={() => { }} />
             </Animatable.View>
-            {/* <TripDetailsCarousel slides={slides} id={trip.id} /> */}
+            <TripDetailsCarousel slides={slides} id={trip.id} />
             <TripDetailsCard trip={trip} />
         </View>
     );
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
         zIndex: 1,
     },
     backIcon: {
-        tintColor: colors.white,
+        tintColor: colors.black,
     },
 });
 

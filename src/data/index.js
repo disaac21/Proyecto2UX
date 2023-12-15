@@ -240,3 +240,43 @@ export const PLACES = [
         hotels: [HOTELS[7], HOTELS[8]],
     },
 ];
+
+export const FAVORITES = [
+    
+    {
+        id: 2,
+        image: require('../../assets/images/trips/eea622430834cb64b900c2f03e5be6b8.jpeg'),
+        title: 'Capri',
+        location: 'Italy',
+        description:
+            'Capri is an island of a thousand faces, where visitors can walk the trails skirting the cliffs above the Mediterranean in total solitude, dive into the crystalline waters of its rocky shore, or plunge into the vibrant crowds of the Piazzetta and shop in the most fashionable boutiques in the world.',
+        rating: 9.1,
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[3], HOTELS[4]],
+    },
+    {
+        id: 3,
+        image: require('../../assets/images/trips/0e627c12c05e4dd93ab122d618ea7849.jpeg'),
+        title: 'Bora Bora',
+        location: 'Polynesia',
+        description:
+            'Learn how you can travel Bora Bora on a budget and how overwater bungalows are possible for cheap plus tips on keeping Bora Bora trip costs low.',
+        rating: 8.9,
+        gallery: [],
+        reviews: [REVIEWS[1], REVIEWS[2]],
+        hotels: [HOTELS[5], HOTELS[6]],
+    },
+    {
+        id: 7,
+        image: require('../../assets/images/trips/c2dcbb54ca9316831b0f6ed4d4136dda.jpeg'),
+        title: 'Phuket',
+        location: 'Thailand',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        rating: 9.2,
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+];
