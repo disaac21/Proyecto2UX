@@ -23,7 +23,7 @@ const TopPlacesCarousel = ({ list }) => {
                         onPress={() => {
                             navigation.navigate('TripDetails', { trip: item });
                         }}>
-                        <CardFavoriteIcon active={false} onPress={() => { }} />
+                        <CardFavoriteIcon item={item} active={false} onPress={() => { }} />
                         <SharedElement
                             id={`trip.${item.id}.image`}
                             style={StyleSheet.absoluteFillObject}>

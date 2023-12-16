@@ -9,7 +9,7 @@ import * as Animatable from 'react-native-animatable';
 import FavoriteButton from '../components/shared/FavoriteButton';
 import TripDetailsCarousel from '../components/TripDetailsCarousel';
 
-const TripDetailsScreen = ({ navigation, route }) => {
+const TripDetailsScreen = ({ navigation, route, item }) => {
     const insets = useSafeAreaInsets();
     const { trip } = route.params;
     const slides = [trip.image, ...trip.gallery];
@@ -36,7 +36,7 @@ const TripDetailsScreen = ({ navigation, route }) => {
                 delay={500}
                 duration={400}
                 easing="ease-in-out">
-                <FavoriteButton onToggleFavorite={() => handleToggleFavorite(item)}/>
+                <FavoriteButton item={trip} onToggleFavorite={() => handleToggleFavorite(item)}/>
             </Animatable.View>
             <TripDetailsCarousel slides={slides} id={trip.id} />
             <TripDetailsCard trip={trip} />
