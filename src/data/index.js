@@ -297,15 +297,149 @@ export const FAVORITES = [
     },
 ];
 
+export const APARTMENTS = [
+    {
+        id: 2000,
+        title: 'Downtown Luxury Loft',
+        image: require('../../assets/images/apartments/apartment-1.jpg'),
+        location: 'USA, San Francisco',
+        rating: 9.7,
+        pricePeerDay: '350$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2001,
+        title: 'Modern City View Apartment',
+        image: require('../../assets/images/apartments/apartment-2.jpg'),
+        location: 'Germany, Berlin',
+        rating: 9.4,
+        pricePeerDay: '280$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2002,
+        title: 'Cozy Urban Studio',
+        image: require('../../assets/images/apartments/apartment-3.jpg'),
+        location: 'Japan, Osaka',
+        rating: 9.2,
+        pricePeerDay: '200$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2003,
+        title: 'Chic High-Rise Apartment',
+        image: require('../../assets/images/apartments/apartment-4.jpg'),
+        location: 'France, Paris',
+        rating: 9.6,
+        pricePeerDay: '400$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2004,
+        title: 'Riverside Penthouse Suite',
+        image: require('../../assets/images/apartments/apartment-5.jpg'),
+        location: 'Australia, Sydney',
+        rating: 9.5,
+        pricePeerDay: '380$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2005,
+        title: 'Classic Elegance in the City',
+        image: require('../../assets/images/apartments/apartment-6.jpg'),
+        location: 'Italy, Rome',
+        rating: 9.3,
+        pricePeerDay: '250$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2006,
+        title: 'Downtown Executive Suite',
+        image: require('../../assets/images/apartments/apartment-7.jpg'),
+        location: 'Canada, Toronto',
+        rating: 9.8,
+        pricePeerDay: '450$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2007,
+        title: 'Spacious Loft with Skyline View',
+        image: require('../../assets/images/apartments/apartment-8.jpg'),
+        location: 'Spain, Barcelona',
+        rating: 9.4,
+        pricePeerDay: '300$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2008,
+        title: 'Urban Oasis Retreat',
+        image: require('../../assets/images/apartments/apartment-9.jpg'),
+        location: 'South Korea, Seoul',
+        rating: 9.2,
+        pricePeerDay: '220$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+    {
+        id: 2009,
+        title: 'Panoramic Cityscape Apartment',
+        image: require('../../assets/images/apartments/apartment-10.jpg'),
+        location: 'China, Shanghai',
+        rating: 9.5,
+        pricePeerDay: '350$',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+    },
+];
+
+
 export const HOMES = [
     {
         id: 1000,
         image: require('../../assets/images/homes/home-1.jpg'),
         title: 'Beautiful Villa with a View',
         location: 'Spain, Costa del Sol',
+        rating: 9.5,
         description:
             'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
-        rating: 9.5,
         gallery: [],
         reviews: [REVIEWS[2], REVIEWS[1]],
         hotels: [HOTELS[7], HOTELS[8]],
