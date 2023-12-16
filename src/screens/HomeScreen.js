@@ -4,7 +4,7 @@ import {colors} from '../constants/theme';
 import MainHeader from '../components/shared/MainHeader';
 import ScreenHeader from '../components/shared/ScreenHeader';
 import TopPlacesCarousel from '../components/TopPlacesCarousel';
-import { PLACES, TOP_PLACES } from "../data/index";
+import { HOMES, PLACES, TOP_PLACES } from "../data/index";
 import SectionHeader from '../components/shared/SectionHeader';
 import TripsList from '../components/TripsList';
 
@@ -28,7 +28,7 @@ const HomeScreen = () => {
           buttonTitle="See All"
           onPress={() => {}}
         />
-        <TripsList list={PLACES} />
+        <TripsList list={HOMES} />
       </ScrollView>
     </View>
   );
