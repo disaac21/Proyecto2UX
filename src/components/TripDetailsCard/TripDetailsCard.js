@@ -102,7 +102,7 @@ const TripDetailsCard = ({trip}) => {
         email: currentUser.email,
       };
       const response = await axios.post(
-        `https://0gn75wh2-5000.use2.devtunnels.ms/subirReserva`,
+        `https://wk3pzfqq-5000.use.devtunnels.ms/subirReserva`,
         contenido,
         {
           headers: {
