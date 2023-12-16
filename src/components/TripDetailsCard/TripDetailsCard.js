@@ -21,6 +21,7 @@ import RatingOverall from '../shared/Rating/RatingOverall';
 import HotelsCarousel from './HotelsCarousel';
 import Reviews from '../Reviews/Reviews';
 import axios from 'axios';
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 
 const AnimatedDivider = Animated.createAnimatedComponent(Divider);
 
@@ -91,15 +92,17 @@ const TripDetailsCard = ({trip}) => {
 
   const handleDataSubmit = async data => {
     try {
+        const currentUser = FIREBASE_AUTH.currentUser;
       console.log('prueba');
       let contenido = {
         checkIn: data.startDate,
         checkOut: data.endDate,
         people: data.numberInput,
         name: trip.title,
+        email: currentUser.email,
       };
       const response = await axios.post(
-        'http://192.168.0.15:5000/subirReserva',
+        `http://192.168.0.15:5000/subirReserva`,
         contenido,
         {
           headers: {

@@ -3,6 +3,7 @@ import {View, TouchableOpacity} from 'react-native';
 import {colors, shadow} from '../../constants/theme';
 import Icon from './Icon';
 import axios from 'axios';
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 
 const FavoriteButton = ({active, style, item}) => {
     
@@ -12,6 +13,7 @@ const FavoriteButton = ({active, style, item}) => {
     console.log('le di favorito');
     console.log(item);
     try {
+      const currentUser = FIREBASE_AUTH.currentUser;
         let contenido = {
             description: item.description,
             gallery: item.gallery,
@@ -23,6 +25,7 @@ const FavoriteButton = ({active, style, item}) => {
             rating: item.rating,
             reviews: item.reviews,
             title: item.title,
+            email: currentUser.email,
         }
         const response = await axios.post(
           'http://192.168.0.15:5000/subirFavorite', contenido,{
