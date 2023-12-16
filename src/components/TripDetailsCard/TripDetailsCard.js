@@ -5,6 +5,8 @@ import * as Animatable from 'react-native-animatable';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import CustomHandler from './CustomHandler';
 import CustomBackground from './CustomBackground';
+import DateAndNumberInput from './DateAndNumberInput'; // Import your CalendarComponent
+
 import Animated, {
     Extrapolation,
     interpolate,
@@ -126,6 +128,8 @@ const TripDetailsCard = ({ trip }) => {
                         buttonTitle="Reservar"
                     />
 
+                    <DateAndNumberInput/>
+
                     <SectionHeader
                         title="Summary"
                         containerStyle={styles.sectionHeader}
@@ -196,6 +200,10 @@ const styles = StyleSheet.create({
     },
     rating: {
         marginHorizontal: spacing.l,
+    },
+    container: {
+        flex: 1,
+        // Other styles as needed
     },
 });
 
