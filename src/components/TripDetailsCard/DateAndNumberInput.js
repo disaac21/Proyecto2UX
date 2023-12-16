@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet, Button } from 'react-native';
 
-const DateAndNumberInput = () => {
+const DateAndNumberInput = ({ onDataSubmit, item }) => {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [numberInput, setNumberInput] = useState('');
@@ -16,6 +16,15 @@ const DateAndNumberInput = () => {
 
     const handleNumberInputChange = (text) => {
         setNumberInput(text);
+    };
+
+    const handleSubmission = () => {
+        // Collect data and send it back using the callback
+        onDataSubmit({
+            startDate,
+            endDate,
+            numberInput: parseInt(numberInput), // Convert to integer if needed
+        });
     };
 
     return (
@@ -34,11 +43,12 @@ const DateAndNumberInput = () => {
             />
             <TextInput
                 style={styles.input}
-                placeholder="Enter the Number of People to Book"
+                placeholder="Enter a Number"
                 keyboardType="numeric"
                 value={numberInput}
                 onChangeText={handleNumberInputChange}
             />
+            <Button title="Submit" onPress={handleSubmission} />
         </View>
     );
 };

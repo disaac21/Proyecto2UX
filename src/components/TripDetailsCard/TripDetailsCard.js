@@ -87,6 +87,12 @@ const TripDetailsCard = ({ trip }) => {
         ),
     }));
 
+    const handleDataSubmit = (data) => {
+        // Handle the submitted data here, you can perform any actions with this data
+        console.log('Submitted data:', data);
+        console.log(trip);
+    };
+
     return (
         <BottomSheet
             index={0}
@@ -128,7 +134,7 @@ const TripDetailsCard = ({ trip }) => {
                         buttonTitle="Reservar"
                     />
 
-                    <DateAndNumberInput/>
+                    <DateAndNumberInput onDataSubmit={handleDataSubmit} />  
 
                     <SectionHeader
                         title="Summary"
