@@ -37,7 +37,7 @@ const FavoriteScreen = () => {
         {/* <TopPlacesCarousel list={TOP_PLACES} /> */}
         {/* <SectionHeader title="Favorites"/> */}
         {/* {console.log('hola')} */}
-        <TripsList list={FAVORITES} />
+        <TripsList list={hotels} />
       </ScrollView>
 
       {console.log('hola')}
