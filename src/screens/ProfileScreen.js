@@ -9,10 +9,14 @@ import {
   FlatList,
   Dimensions,
   Text,
+  Button,
 } from 'react-native';
 import Theme from '../../constants/Theme';
 import {nowTheme} from '../../constants';
 import axios from 'axios';
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import { signOut } from 'firebase/auth'; // Import the signOut method
+
 
 const {width, height} = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
@@ -20,6 +24,16 @@ const thumbMeasure = (width - 48 - 32) / 3;
 const ProfileScreen = () => {
   const [hotels, setHotels] = useState([]);
   const [error, setError] = useState(null);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(FIREBASE_AUTH); // Sign the user out using the signOut method
+      navigation.navigate('Login'); // Navigate to the login screen after successful logout
+    } catch (error) {
+      console.error('Error logging out:', error);
+      // Handle error if logout fails (display an error message, etc.)
+    }
+  };
 
   useEffect(() => {
     const getHotels = async () => {
@@ -76,6 +90,8 @@ const ProfileScreen = () => {
             )}
           />
         </View>
+
+        <Button title="Log Out" onPress={handleLogout} />
 
         {/* Add more sections or customize based on your needs */}
       </View>
