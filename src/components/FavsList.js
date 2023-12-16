@@ -26,7 +26,7 @@ const FavsList = ({}) => {
 
       try {
         const response = await axios.get(
-          `https://wk3pzfqq-5000.use.devtunnels.ms/listFavorites/${currentUser.email}`,
+          `https://0gn75wh2-5000.use2.devtunnels.ms/listFavorites/${currentUser.email}`,
         ); // replace with your actual backend URL
         setHotels(response.data);
         // console.log(hotels);
