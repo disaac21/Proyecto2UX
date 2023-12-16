@@ -24,6 +24,7 @@ const thumbMeasure = (width - 48 - 32) / 3;
 const ProfileScreen = () => {
   const [hotels, setHotels] = useState([]);
   const [error, setError] = useState(null);
+  const [userEmail, setUserEmail] = useState('');
 
   const handleLogout = async () => {
     try {
@@ -36,22 +37,31 @@ const ProfileScreen = () => {
   };
 
   useEffect(() => {
-    const getHotels = async () => {
-      try {
-        const response = await axios.get(
-          'http://192.168.0.15:5000/listReservas',
-        ); // replace with your actual backend URL
-        setHotels(response.data);
-        console.log(hotels);
-      } catch (error) {
-        console.error('Error getting hotels', error);
-        setError(
-          'Error getting hotels. Please check your network connection and try again.',
-        );
-      }
-    };
-
-    getHotels();
+    // Get the current user from Firebase Authentication
+    const currentUser = FIREBASE_AUTH.currentUser;
+    if (currentUser) {
+      // Extract user's email and set it in state
+      // setUserEmail(currentUser.email);
+      console.log(currentUser.email);
+      const getHotels = async () => {
+        try {
+          const response = await axios.get(
+            `http://192.168.0.15:5000/listReservas/${currentUser.email}`,
+          ); // replace with your actual backend URL
+          // console.log(response.data);
+          setHotels(response.data);
+          console.log(hotels);
+        } catch (error) {
+          console.error('Error getting hotels', error);
+          setError(
+            'Error getting hotels. Please check your network connection and try again.',
+          );
+        }
+      };
+  
+      getHotels();
+    }
+    
   }, []);
 
   // Sample data for bookings
