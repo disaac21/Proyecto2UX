@@ -146,6 +146,19 @@ export const HOTELS = {
 
 export const TOP_PLACES = [
     {
+        id: 1000,
+        image: require('../../assets/images/homes/home-1.jpg'),
+        title: 'Beautiful Villa with a View',
+        location: 'Spain, Costa del Sol',
+        description:
+            'Phuket is the largest island in Thailand. It is located in the Andaman Sea in southern Thailand',
+        rating: 9.5,
+        gallery: [],
+        reviews: [REVIEWS[2], REVIEWS[1]],
+        hotels: [HOTELS[7], HOTELS[8]],
+        pricePeerDay: '300$',
+    },
+    {
         id: 1,
         image: require('../../assets/images/trips/2082f59465c39094ce90bebd0fcf8fa7.jpeg'),
         title: 'Amalfi Coast',
