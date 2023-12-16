@@ -28,7 +28,7 @@ const FavoriteButton = ({active, style, item}) => {
             email: currentUser.email,
         }
         const response = await axios.post(
-          'http://192.168.0.15:5000/subirFavorite', contenido,{
+          'https://0gn75wh2-5000.use2.devtunnels.ms/subirFavorite', contenido,{
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
             }

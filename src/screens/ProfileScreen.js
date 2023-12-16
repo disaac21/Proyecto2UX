@@ -46,7 +46,7 @@ const ProfileScreen = () => {
       const getHotels = async () => {
         try {
           const response = await axios.get(
-            `http://192.168.0.15:5000/listReservas/${currentUser.email}`,
+            `https://0gn75wh2-5000.use2.devtunnels.ms/listReservas/${currentUser.email}`,
           ); // replace with your actual backend URL
           // console.log(response.data);
           setHotels(response.data);
