@@ -13,6 +13,9 @@ const TripDetailsScreen = ({ navigation, route }) => {
     const insets = useSafeAreaInsets();
     const { trip } = route.params;
     const slides = [trip.image, ...trip.gallery];
+    const handleToggleFavorite = () => {
+        
+    }
     return (
         <View style={styles.container}>
             <Animatable.View
@@ -33,7 +36,7 @@ const TripDetailsScreen = ({ navigation, route }) => {
                 delay={500}
                 duration={400}
                 easing="ease-in-out">
-                <FavoriteButton />
+                <FavoriteButton onToggleFavorite={() => handleToggleFavorite(item)}/>
             </Animatable.View>
             <TripDetailsCarousel slides={slides} id={trip.id} />
             <TripDetailsCard trip={trip} />

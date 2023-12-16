@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import FavoriteButton from '../FavoriteButton';
 
 const CardFavoriteIcon = ({ active, onPress }) => {
+    
     return (
         <FavoriteButton active={active} onPress={onPress} style={styles.icon} />
     );

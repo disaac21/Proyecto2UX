@@ -42,7 +42,8 @@ const TripsList = ({ selectedType }) => {
                                 <Text style={styles.title}>{item.title}</Text>
                                 <Text style={styles.location}>{item.location}</Text>
                             </View>
-                            <FavoriteButton/>
+                            {console.log('item.id: ', item.id)}
+                            <FavoriteButton item={item}/>
                         </CardContent>
                     </Card>
                 );
