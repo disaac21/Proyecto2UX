@@ -48,7 +48,7 @@ const DateAndNumberInput = ({ onDataSubmit, item }) => {
                 value={numberInput}
                 onChangeText={handleNumberInputChange}
             />
-            <Button title="Submit" onPress={handleSubmission} />
+            <Button title="Reservar" onPress={handleSubmission} />
         </View>
     );
 };

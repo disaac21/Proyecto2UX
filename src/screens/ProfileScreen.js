@@ -35,10 +35,10 @@ const ProfileScreen = () => {
       // Handle error if logout fails (display an error message, etc.)
     }
   };
-
+  const currentUser = FIREBASE_AUTH.currentUser;
   useEffect(() => {
     // Get the current user from Firebase Authentication
-    const currentUser = FIREBASE_AUTH.currentUser;
+    
     if (currentUser) {
       // Extract user's email and set it in state
       // setUserEmail(currentUser.email);
@@ -74,13 +74,13 @@ const ProfileScreen = () => {
       <View style={styles.container}>
         {/* Profile Picture and User Info */}
         <View style={styles.profileHeader}>
-          <Image
+          {/* <Image
             source={require('../../images/descarga.jpeg')} // Replace with the user's profile picture
             style={styles.profileImage}
-          />
+          /> */}
           <View style={styles.userInfo}>
-            <Text style={styles.userName}>John Doe</Text>
-            <Text style={styles.userEmail}>john.doe@example.com</Text>
+            <Text style={styles.userName}>Bienvenido a su Perfil:</Text>
+            <Text style={styles.userEmail}>{currentUser.email}</Text>
           </View>
         </View>
 

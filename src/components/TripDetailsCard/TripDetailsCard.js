@@ -159,8 +159,6 @@ const TripDetailsCard = ({trip}) => {
             title="Hacer Una Reserva"
             containerStyle={styles.sectionHeader}
             titleStyle={styles.sectionTitle}
-            onPress={() => {}}
-            buttonTitle="Reservar"
           />
 
           <DateAndNumberInput onDataSubmit={handleDataSubmit} />
