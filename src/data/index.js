@@ -254,6 +254,7 @@ export const FAVORITES = [
         gallery: [],
         reviews: [REVIEWS[2], REVIEWS[1]],
         hotels: [HOTELS[3], HOTELS[4]],
+        id_usuario: 1
     },
     {
         id: 3,
@@ -266,6 +267,7 @@ export const FAVORITES = [
         gallery: [],
         reviews: [REVIEWS[1], REVIEWS[2]],
         hotels: [HOTELS[5], HOTELS[6]],
+        id_usuario: 1
     },
     {
         id: 7,
@@ -278,5 +280,6 @@ export const FAVORITES = [
         gallery: [],
         reviews: [REVIEWS[2], REVIEWS[1]],
         hotels: [HOTELS[7], HOTELS[8]],
+        id_usuario: 2
     },
 ];
