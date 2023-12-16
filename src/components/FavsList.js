@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { colors, sizes, spacing } from '../constants/theme';
 import FavoriteButton from './shared/FavoriteButton';
@@ -8,48 +8,51 @@ import Card from './shared/Card/Card';
 import CardMedia from './shared/Card/CardMedia';
 import CardContent from './shared/Card/CardContent';
 import { HOMES, APARTMENTS, PLACES } from "../data/index"; // Import your data sources
+import axios from 'axios';
 
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);
 const CARD_HEIGHT = 220;
 
 const FavsList = ({ }) => {
     const navigation = useNavigation();
-    let trips = [];
 
     const [hotels, setHotels] = useState([]);
     const [error, setError] = useState(null);
 
-    const getHotels = async () => {
-        try {
-            const response = await axios.get('http://192.168.0.15:5000/listFavorites'); // replace with your actual backend URL
-            setHotels(response.data);
-            console.log(hotels);
-        } catch (error) {
-            console.error('Error getting hotels', error);
-            setError('Error getting hotels. Please check your network connection and try again.');
-        }
-    };
+    useEffect(() => {
+        const getHotels = async () => {
+            try {
+                const response = await axios.get('http://192.168.0.15:5000/listFavorites'); // replace with your actual backend URL
+                setHotels(response.data);
+                console.log(hotels);
+            } catch (error) {
+                console.error('Error getting hotels', error);
+                setError('Error getting hotels. Please check your network connection and try again.');
+            }
+        };
 
-    console.log(hotels);
-    trips = [hotels] //Aca se agarra el arreglo de favoritos
+        getHotels();
+    }, []);
+    let trips = hotels;
+    // trips = hotels //Aca se agarra el arreglo de favoritos
 
     return (
         <View style={styles.container}>
             {trips.map((item, index) => {
                 return (
                     <Card
-                        key={item}
+                        key={item.id}
                         style={styles.card}
                         onPress={() => {
                             navigation.navigate('TripDetails', { trip: item });
                         }}>
-                        <SharedElement id={`trip.${item}.image`} style={styles.media}>
-                            <CardMedia source={item} />
+                        <SharedElement id={`trip.${item.id}.image`} style={styles.media}>
+                            <CardMedia source={item.image} />
                         </SharedElement>
                         <CardContent style={styles.content}>
                             <View style={styles.titleBox}>
-                                <Text style={styles.title}>{item}</Text>
-                                <Text style={styles.location}>{item}</Text>
+                                <Text style={styles.title}>{item.title}</Text>
+                                <Text style={styles.location}>{item.location}</Text>
                             </View>
                             <FavoriteButton />
                         </CardContent>
