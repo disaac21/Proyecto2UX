@@ -19,7 +19,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <MainHeader title="Travel App" />
-      <ScreenHeader mainTitle="Bienvenido" secondTitle="A Tu Búsqueda Ideal" />
+      {/* <ScreenHeader mainTitle="Bienvenido" secondTitle="A Tu Búsqueda Ideal" /> */}
       <ScrollView showsVerticalScrollIndicator={false}>
         <TopPlacesCarousel list={TOP_PLACES} />
 
