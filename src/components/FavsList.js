@@ -12,7 +12,7 @@ import { HOMES, APARTMENTS, PLACES } from "../data/index"; // Import your data s
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);
 const CARD_HEIGHT = 220;
 
-const TripsList = ({ }) => {
+const FavsList = ({ }) => {
     const navigation = useNavigation();
     let trips = [];
 
@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default TripsList;
+export default FavsList;

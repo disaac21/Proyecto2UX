@@ -41,7 +41,7 @@ const FavoriteScreen = () => {
         <FavsList selectedType={null} />
       </ScrollView>
 
-      {console.log('hola')}
+      {/* {console.log('hola')} */}
 
         
 

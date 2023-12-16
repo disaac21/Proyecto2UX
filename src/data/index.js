@@ -202,7 +202,7 @@ export const TOP_PLACES = [
 export const PLACES = [
     {
         id: 5,
-        image: require('../../assets/images/trips/645d5f28e26c7de2a280f71db15c2141.jpeg'),
+        image: require('../../assets/images/hotels/cp-1.jpeg'),
         title: 'Cappadocia',
         location: 'Turkey',
         description:
@@ -218,7 +218,7 @@ export const PLACES = [
     },
     {
         id: 2,
-        image: require('../../assets/images/trips/eea622430834cb64b900c2f03e5be6b8.jpeg'),
+        image: require('../../assets/images/hotels/cp-2.jpeg'),
         title: 'Capri',
         location: 'Italy',
         description:
@@ -230,7 +230,7 @@ export const PLACES = [
     },
     {
         id: 3,
-        image: require('../../assets/images/trips/0e627c12c05e4dd93ab122d618ea7849.jpeg'),
+        image: require('../../assets/images/hotels/capri-1.jpeg'),
         title: 'Bora Bora',
         location: 'Polynesia',
         description:
@@ -242,7 +242,7 @@ export const PLACES = [
     },
     {
         id: 7,
-        image: require('../../assets/images/trips/c2dcbb54ca9316831b0f6ed4d4136dda.jpeg'),
+        image: require('../../assets/images/hotels/capri-2.jpeg'),
         title: 'Phuket',
         location: 'Thailand',
         description:
