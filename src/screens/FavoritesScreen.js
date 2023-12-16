@@ -6,6 +6,7 @@ import ScreenHeader from '../components/shared/ScreenHeader';
 import TopPlacesCarousel from '../components/TopPlacesCarousel';
 import SectionHeader from '../components/shared/SectionHeader';
 import TripsList from '../components/TripsList';
+import FavsList from '../components/FavsList';
 import { FAVORITES, PLACES, TOP_PLACES } from '../data';
 import axios from 'axios';
 
@@ -37,7 +38,7 @@ const FavoriteScreen = () => {
         {/* <TopPlacesCarousel list={TOP_PLACES} /> */}
         {/* <SectionHeader title="Favorites"/> */}
         {/* {console.log('hola')} */}
-        <TripsList list={hotels} />
+        <FavsList selectedType={null} />
       </ScrollView>
 
       {console.log('hola')}
