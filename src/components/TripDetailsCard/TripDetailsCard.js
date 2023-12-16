@@ -117,6 +117,15 @@ const TripDetailsCard = ({ trip }) => {
                 showsHorizontalScrollIndicator={false}>
                 <Animated.View style={contentStyle}>
                     <RatingOverall rating={trip.rating} containerStyle={styles.rating} />
+
+                    <SectionHeader
+                        title="Hacer Una Reserva"
+                        containerStyle={styles.sectionHeader}
+                        titleStyle={styles.sectionTitle}
+                        onPress={() => { }}
+                        buttonTitle="Reservar"
+                    />
+
                     <SectionHeader
                         title="Summary"
                         containerStyle={styles.sectionHeader}

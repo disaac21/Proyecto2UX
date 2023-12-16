@@ -15,6 +15,24 @@ const HomeScreen = () => {
       <ScreenHeader mainTitle="Find Your" secondTitle="Dream Trip" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <TopPlacesCarousel list={TOP_PLACES} />
+
+        <SectionHeader
+          title="Hoteles"
+          buttonTitle="Ir A Hoteles"
+          onPress={() => {}}
+        />
+        <SectionHeader
+          title="Apartamentos"
+          buttonTitle="Ir A Apartamentos"
+          onPress={() => {}}
+        />
+        <SectionHeader
+          title="Casas"
+          buttonTitle="Ir A Casas"
+          onPress={() => {}}
+        />
+
+
         <SectionHeader
           title="Popular Trips"
           buttonTitle="See All"
