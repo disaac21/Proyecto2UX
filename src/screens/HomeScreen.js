@@ -1,4 +1,4 @@
-import react from 'react';
+import react, { useState } from 'react';
 import {Text, View, StyleSheet, ScrollView, Button} from 'react-native';
 import {colors} from '../constants/theme';
 import MainHeader from '../components/shared/MainHeader';
@@ -9,26 +9,28 @@ import SectionHeader from '../components/shared/SectionHeader';
 import TripsList from '../components/TripsList';
 
 const HomeScreen = () => {
+
+  const [selectedType, setSelectedType] = useState(null);
+
+  const handleButtonPress = (type) => {
+    setSelectedType(type);
+  };
+
   return (
     <View style={styles.container}>
       <MainHeader title="Travel App" />
-      <ScreenHeader mainTitle="Find Your" secondTitle="Dream Trip" />
+      <ScreenHeader mainTitle="Bienvenido" secondTitle="A Tu Búsqueda Ideal" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <TopPlacesCarousel list={TOP_PLACES} />
 
-        <SectionHeader title="Ofrecemos"/>
+        <SectionHeader title="Nosotros Ofrecemos"/>
         <View style={styles.buttonContainer}>
-          <Button title="Casas" onPress={() => {}} />
-          <Button title="Apartamentos" onPress={() => {}} />
-          <Button title="Hoteles" onPress={() => {}} />
+          <Button title="Casas" onPress={() => handleButtonPress('casas')} />
+          <Button title="Apartamentos" onPress={() => handleButtonPress('apartamentos')} />
+          <Button title="Hoteles" onPress={() => handleButtonPress('hoteles')} />
         </View>
 
-        <SectionHeader
-          title="Popular Trips"
-          buttonTitle="See All"
-          onPress={() => {}}
-        />
-        <TripsList list={HOMES} />
+        <TripsList selectedType={selectedType} />
       </ScrollView>
     </View>
   );

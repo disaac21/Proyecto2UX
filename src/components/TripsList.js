@@ -7,15 +7,26 @@ import { SharedElement } from 'react-navigation-shared-element';
 import Card from './shared/Card/Card';
 import CardMedia from './shared/Card/CardMedia';
 import CardContent from './shared/Card/CardContent';
+import { HOMES, APARTMENTS, HOTELS } from "../data/index"; // Import your data sources
 
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);
 const CARD_HEIGHT = 220;
 
-const TripsList = ({ list }) => {
+const TripsList = ({ selectedType }) => {
     const navigation = useNavigation();
+    let trips = [];
+
+    if (selectedType === 'casas') {
+        trips = HOMES; // Display homes data
+    } else if (selectedType === 'apartamentos') {
+        trips = APARTMENTS; // Display apartments data
+    } else if (selectedType === 'hoteles') {
+        trips = HOTELS; // Display hotels data
+    }
+
     return (
         <View style={styles.container}>
-            {list.map((item, index) => {
+            {trips.map((item, index) => {
                 return (
                     <Card
                         key={item.id}
