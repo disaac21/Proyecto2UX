@@ -31,7 +31,7 @@ const FavsList = ({}) => {
         setHotels(response.data);
         // console.log(hotels);
       } catch (error) {
-        console.error('Error getting hotels', error);
+        // console.error('Error getting hotels', error);
         setError(
           'Error getting hotels. Please check your network connection and try again.',
         );
