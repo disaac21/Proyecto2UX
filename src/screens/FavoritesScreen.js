@@ -18,7 +18,7 @@ const FavoriteScreen = () => {
   useEffect(() => {
     const getHotels = async () => {
       try {
-        const response = await axios.get('https://0gn75wh2-5000.use2.devtunnels.ms/listFavorites'); // replace with your actual backend URL
+        const response = await axios.get('https://wk3pzfqq-5000.use.devtunnels.ms/listFavorites'); // replace with your actual backend URL
         setHotels(response.data);
         console.log(hotels);
       } catch (error) {
