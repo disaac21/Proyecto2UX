@@ -258,7 +258,7 @@ export const FAVORITES = [
     
     {
         id: 2,
-        image: require('../../assets/images/trips/eea622430834cb64b900c2f03e5be6b8.jpeg'),
+        image: require('../../assets/images/hotels/cp-2.jpeg'),
         title: 'Capri',
         location: 'Italy',
         description:
@@ -271,7 +271,7 @@ export const FAVORITES = [
     },
     {
         id: 3,
-        image: require('../../assets/images/trips/0e627c12c05e4dd93ab122d618ea7849.jpeg'),
+        image: require('../../assets/images/hotels/capri-1.jpeg'),
         title: 'Bora Bora',
         location: 'Polynesia',
         description:
@@ -284,7 +284,7 @@ export const FAVORITES = [
     },
     {
         id: 7,
-        image: require('../../assets/images/trips/c2dcbb54ca9316831b0f6ed4d4136dda.jpeg'),
+        image: require('../../assets/images/hotels/capri-2.jpeg'),
         title: 'Phuket',
         location: 'Thailand',
         description:
