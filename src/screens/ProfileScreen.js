@@ -68,7 +68,7 @@ const ProfileScreen = () => {
             // keyExtractor={(item) => item.id}
             renderItem={({item}) => (
               <View style={styles.bookingItem}>
-                <Text style={styles.bookingName}>{item.lugar}</Text>
+                <Text style={styles.bookingName}>{item.name}</Text>
                 <Text>Check-in: {item.checkIn}</Text>
                 <Text>Check-out: {item.checkOut}</Text>
                 <Text>people: {item.people}</Text>
