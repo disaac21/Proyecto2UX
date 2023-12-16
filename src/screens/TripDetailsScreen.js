@@ -33,7 +33,7 @@ const TripDetailsScreen = ({ navigation, route }) => {
                 delay={500}
                 duration={400}
                 easing="ease-in-out">
-                <FavoriteButton onPress={() => { }} />
+                <FavoriteButton />
             </Animatable.View>
             <TripDetailsCarousel slides={slides} id={trip.id} />
             <TripDetailsCard trip={trip} />

@@ -42,7 +42,7 @@ const TripsList = ({ selectedType }) => {
                                 <Text style={styles.title}>{item.title}</Text>
                                 <Text style={styles.location}>{item.location}</Text>
                             </View>
-                            <FavoriteButton />
+                            <FavoriteButton/>
                         </CardContent>
                     </Card>
                 );
